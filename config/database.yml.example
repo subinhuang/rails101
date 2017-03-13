@@ -23,6 +23,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   database: rails101_production
   username: rails101
   password: <%= ENV['BLOG_DATABASE_PASSWORD'] %>
